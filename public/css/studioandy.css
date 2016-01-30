@@ -1,0 +1,28 @@
+.m0 {margin: 0;}
+/* ******************************************************************** */
+/* Clearfix: http://csscreator.com/attributes/containedfloat.php        */
+/* ******************************************************************** */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.centered { text-align: center; }
+
+#galleryx {min-height: 150px;}
+#gallery  a { box-shadow: 2px #ff0000!important; background: white; border-radius: 10px!important; display: inline-block; padding: 2px; }
+#gallery img { border-radius: 10px!important; }
+
+.sidebar #nav li ul li a.active {
+    background: #0a0a0a;
+}
+
+/* ******************************************************************** */
+/*                      printer styles                                  */
+/* ******************************************************************** */
+@media print{
+    /*hide the left column when printing*/
+    #leftcol__x{display:none;}
+}

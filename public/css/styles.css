@@ -1,0 +1,393 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+*
+{
+margin: 0px;
+padding: 0px;
+}
+
+a{
+	font-family: "Times New Roman", Times, serif;
+	color: #1f4155;
+	font-weight:bold;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+a:hover {
+	
+	color: #000000;
+}
+
+body {	
+	background: #269fdb url(/public/images/images/bg.jpg);
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+
+#con_bg{
+	background: url(/public/images/images/con_bg.png);
+	background-repeat:repeat-y;
+	background-position:center;
+}
+
+#content{
+	margin: 0 auto;
+	width: 1146px;
+	text-align: left;
+	background: url(/public/images/images/bg1.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+}
+
+#main{
+	width: 1035px;
+	margin: 0 auto;
+	clear:both;
+}
+
+#header {
+	width: 1146px;
+	height: 180px;
+	position:relative;
+}
+#header .de .link {
+	position:absolute;
+	left:605px;
+	top:0;
+	cursor:default;
+	outline:none;
+	z-index:1;
+	display:block;
+}
+#header .de a.link img {
+	border:none;
+	display:block;
+}
+#logo {
+	float: left;
+	text-align: left;
+	padding-left: 70px;
+	padding-top:20px;
+	position:relative;
+	z-index:2;
+}
+
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+#logo H2 a{
+	font-size: 12px;
+}
+
+#navcontainer {
+	width: 696px;
+	height: 49px;
+	padding-left: 450px;
+	padding-top: 15px;
+	position:relative;
+	z-index:2;
+}
+
+#navcontainer ul {
+	padding-left: 0px;
+	margin: 0px;
+	list-style:none;
+}
+
+#navcontainer li {
+	display: inline;
+	list-style: none;
+	padding-left:0px;
+}
+
+#navcontainer a {
+	float: left;
+	width: 123px;
+	height: 30px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 34px;
+	font-size: 15px;
+	background: url(/public/images/images/menubg.png);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	margin-right: 4px;
+}
+
+#navcontainer a:hover{
+	width: 123px;
+	height: 30px;
+	background: url(/public/images/images/menuhover.png) no-repeat center;
+}
+
+
+#main_top{
+	background: url(/public/images/images/maintop.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	height: 9px;
+}
+
+#mainbg{
+	background: url(/public/images/images/mainbg.png);
+	background-repeat:repeat-y;
+}
+
+#main_bot{
+	background: url(/public/images/images/mainbot.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	height: 20px;
+}
+
+#lite{
+	margin: 0 auto;
+	background: url(/public/images/images/lite.png);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+}
+
+#left{
+	width: 282px;
+	margin-left: 9px;
+	color: #ffffff;
+}
+
+#left_top{
+	background: url(/public/images/images/lefttop.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin: 0 auto;
+	height:20px;
+}
+
+#left_poly{
+	background: url(/public/images/images/leftpoly.png);
+	background-repeat:no-repeat;
+	background-position:top;
+}
+
+#left H3{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+
+
+
+
+
+#left ul li a:hover {
+	color: #3f5c6d;
+}
+
+.comnews{
+	background: url(/public/images/images/ls.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	margin-left: 15px;
+	padding-left: 25px;
+}
+
+.comnews h2{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-weight:bold;
+	font-size:12px;
+}
+
+.comnews p{
+	padding-right: 20px;
+	line-height:20px;
+}
+
+.comnews a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight:bold;
+	text-decoration:none;
+	border-bottom: 1px dashed #ffffff;
+}
+
+.lefthr{
+	background: url(/public/images/images/lefthr.png) repeat-x;
+	height:1px;
+	margin-left: 1px;
+	margin-right: 3px;
+	margin-bottom: 18px;
+}
+
+#right{
+	float: right;
+	width: 460px;
+	margin-right: 8px;
+}
+
+#right ul{
+	padding-left: 0px;
+}
+
+#right ul li{
+	padding-left:0px;
+	list-style: none;
+	background: url(/public/images/images/ls2.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding-left: 15px;
+	padding-top: 1px;
+	padding-bottom: 5px;
+}
+
+#right H4{
+	height: 38px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #ffffff;
+	margin-left: 2px;
+	margin-right: 2px;
+	background: url(/public/images/images/title_cen.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding-left: 15px;
+	margin-bottom: 15px;
+	padding-top: 16px;
+}
+
+#right p {
+	margin: 0;
+	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height:20px;
+}
+
+.read{
+	text-align:right;
+	margin-right: 15px;
+	padding-top: 3px;
+	padding-right: 13px;
+	padding-bottom: 10px;
+	background: url(/public/images/images/read.png);
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+.read a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight:normal;
+	text-decoration:none;
+	border-bottom: none;
+}
+
+.read a:hover{
+	color: #000000;
+}
+
+#rightleft{
+	float:left;
+	width: 220px;
+}
+
+#rightright{
+	float:right;
+	width: 220px;
+}
+
+#gal{
+	width: 250px;
+	float:right;
+	margin-right: 8px;
+	background: url(/public/images/images/gal_bg.png);
+	background-repeat:repeat-y;
+	background-position:center;
+}
+
+#gal_top{
+	background: url(/public/images/images/gal_top.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	height: 11px;
+}
+
+#gal h2{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #0b0822;
+	text-align:center;
+}
+
+#gal p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight:bold;
+	color: #0b0822;
+	padding-top: 20px;
+}
+
+.view{
+	text-align:right;
+}
+
+.view a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0b0822;
+	text-decoration:underline;
+}
+
+.view a:hover{
+	text-decoration:none;
+}
+
+#gal_pad{
+	padding-left: 11px;
+	padding-right: 11px;
+}
+
+#gal_bot{
+	background: url(/public/images/images/gal_bot.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	height: 11px;
+}
+
+#footer {
+	height: 73px;
+	clear: both;
+	padding-top: 19px;
+	margin-left: 3px;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#footer a {
+	color: #ffffff;
+}
+#content .inner_copy {border:0;color:#f00;float:left;width:50%!important;margin:-202px 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:12px}

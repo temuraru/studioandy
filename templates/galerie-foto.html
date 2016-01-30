@@ -1,0 +1,58 @@
+
+<!-- Title starts -->
+<div class="page-title">
+    <h2>{$currentGallery.name}<span>Galerie foto</span></h2>
+</div>
+<!-- Title ends -->
+
+<!-- Content starts -->
+<div class="box-body">
+    <div class="row-fluid">
+        <div class="span12">
+            {if !empty($currentGallery.filters)}
+                <p>
+                    <!-- Add filter names inside "data-filter". For example ".web-design", ".seo", etc., Filter names are used to filter the below images. -->
+                    <div class="button">
+                        <ul id="filters">
+                            {foreach from=$currentGallery.filters item=filter}
+                                <li><a href="#" data-filter=".{$filter.class}" class="btn btn-danger">{$filter.name}</a></li>
+                            {/foreach}
+                            <!--<li><a href="#" data-filter="*" class="btn btn-danger">Toate</a></li>-->
+                        </ul>
+                    </div>
+                </p>
+            {/if}
+
+            <div id="gallery" class="nocolor" style="{if $currentGallery.height}height: {$currentGallery.height}{/if}">
+                <!-- Add the above used filter names inside div tag. You can add more than one filter names. For image lightbox you need to include "a" tag pointing to image link, along with the class "prettyphoto".-->
+                {foreach from=$currentGallery.photos item=photo}
+                    <div class="element {$photo.class}">
+                        <a href="{$currentGallery.baseHref}{if !empty($photo.folder)}{$photo.folder}/{/if}{$photo.img}" class="prettyphoto" title="{$photo.title}" rel="prettyPhoto[{$currentGallery.name}_{$photo.class}]">
+                            <img src="{$currentGallery.baseHref}{if !empty($photo.folder)}{$photo.folder}/{/if}{if !empty($currentGallery.thumbsFolder)}{$currentGallery.thumbsFolder}/{/if}{if !empty($photo.thumb)}{$photo.thumb}{else}{$photo.img}{/if}" alt="{$photo.title}"/>
+                        </a>
+                    </div>
+                {/foreach}
+            </div>
+
+            {if !empty($mvc.action)}
+                <script>
+                    var currentFilter = '.{$currentGallery.filters.0.class}';
+                    var currentlayoutMode = 'fitRows'; //  'masonry'; // 'fitRows'
+                    if ('{$currentGallery.layoutMode}'.length) {
+                        currentlayoutMode = '{$currentGallery.layoutMode}';
+                    }
+
+                    {literal}
+                    $(document).ready(function(){
+                        $('#gallery').isotope({
+                            layoutMode : currentlayoutMode,
+                            filter: currentFilter
+                        });
+                    });
+                    {/literal}
+                </script>
+            {/if}
+        </div>
+    </div>
+</div>
+<!-- Content ends -->

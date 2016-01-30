@@ -1,0 +1,29 @@
+<div class="sidebar">
+    <!-- Logo -->
+    <div class="logo" style="height: 200px">
+        <a href="/"><img src="/public/images/layout/logo_StudioAndy_black.png" alt="{$site.title|default:'StudioAndy'}" /></a>
+    </div>
+    <div class="sidebar-dropdown"><a href="#">Navigation</a></div>
+    <!--- Sidebar navigation -->
+    <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
+    <!-- Colors: Add the class "br-red" or "br-blue" or "br-green" or "br-orange" or "br-purple" or "br-yellow" to anchor tags to create colorful left border -->
+    <div class="s-content">
+        {include file='menu/side-nav.html'}
+
+        {*
+        <!-- Sidebar search -->
+        <form class="form-search">
+            <div class="input-append">
+                <input type="text" class="input-small search-query">
+                <button type="submit" class="btn btn-danger">Search</button>
+            </div>
+        </form>
+
+        <!-- Sidebar widget -->
+        <div class="s-widget">
+            <h6>Sidebar Widget</h6>
+            <p>Maecenas sit amet ipsum ac ipsum consequat fringilla. Curabitur rutrum dignissim convallis. Cras venenatis rhoncus orci, mattis interdum dui porta sit amet. </p>
+        </div>
+        *}
+    </div>
+</div>

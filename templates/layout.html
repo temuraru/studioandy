@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    {include file='widgets/head.html'}
+</head>
+<body class="{$bodyClass}">
+    <!-- Sliding box starts -->
+    {include file='widgets/analytics.html'}
+    <!-- Sliding box ends -->
+
+
+<!-- Navbar starts -->
+    {include file='menu/top-navbar.html'}
+<!-- Navbar ends -->
+
+<!-- Sliding box starts -->
+    {include file='widgets/slidebox.html'}
+<!-- Sliding box ends -->
+
+<!-- Main content starts -->
+
+<div class="content">
+  <!-- Sidebar starts -->
+    {include file='widgets/sidebar.html'}
+  <!-- Sidebar ends -->
+
+  <!-- Mainbar starts -->
+  <div class="mainbar">
+    <div class="matter">
+      <div class="container-fluid">
+        {if !empty($template)}
+          {include file=$template}
+        {else}
+        {/if}
+      </div>
+    </div>
+  </div>
+  <!-- Mainbar ends -->
+
+ <div class="clearfix"></div>
+  <!-- Foot starts -->
+    {include file='widgets/footer.html'}
+  <!-- Foot ends -->
+</div>
+<div class="clearfix"></div>
+<!-- Main content ends -->
+
+<!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span>
+
+<!-- JS -->
+{include file='widgets/bottom-scripts.html'}
+</body>
+</html>

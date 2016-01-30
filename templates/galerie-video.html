@@ -1,0 +1,49 @@
+
+<!-- Title starts -->
+<div class="page-title">
+    <h2>Galerie video<span></span></h2>
+</div>
+<!-- Title ends -->
+
+<!-- Content starts -->
+<div class="box-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <p>
+                <!-- Add filter names inside "data-filter". For example ".web-design", ".seo", etc., Filter names are used to filter the below images. -->
+                <div class="button">
+                    <ul id="filters">
+                        {foreach from=$videoGallery.filters item=filter}
+                            <li><a href="#" data-filter=".{$filter.class}" class="btn btn-danger">{$filter.name}</a></li>
+                        {/foreach}
+                        {*<li><a href="#" data-filter="*" class="btn btn-danger">Toate</a></li>*}
+                    </ul>
+                </div>
+            </p>
+
+            <div id="gallery" class="nocolor videoGallery">
+                <!-- Add the above used filter names inside div tag. You can add more than one filter names. For image lightbox you need to include "a" tag pointing to image link, along with the class "prettyphoto".-->
+                {foreach from=$videoGallery.videos item=video}
+                    <div class="element {$video.class}">
+                        <a href="{$video.youtube}" class="prettyphoto" title="{$video.title}">
+                            <img src="{$video.img}" alt="{$video.title}" width="250" />
+                        </a>
+                        {if !empty($video.title)}<p>{$video.title}</p>{/if}
+                    </div>
+                {/foreach}
+            </div>
+
+            {if !empty($mvc.action)}
+                <script>
+                    var currentFilter = '.{$mvc.action}';
+                    {literal}
+                        $(document).ready(function(){
+                            $('#gallery').isotope({ layoutMode : 'fitRows', filter: currentFilter });
+                        });
+                    {/literal}
+                </script>
+            {/if}
+        </div>
+    </div>
+</div>
+<!-- Content ends -->

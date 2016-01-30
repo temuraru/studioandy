@@ -1,0 +1,18 @@
+{if !empty($galleries.flexSlider)}
+    <div class="flexslider">
+        <ul class="slides">
+            {foreach from=$galleries.flexSlider item=slide}
+                <li class="flexSlide i_{$slide.id}">
+                    <img src="{$slide.image}" alt="{$slide.title}"/>
+                    {if !empty($slide.caption.title)}
+                        <div class="flex-caption">
+                            <div class="bor"></div>
+                            {if !empty($slide.caption.title)}<h3>{$slide.caption.title}</h3>{/if}
+                            {if !empty($slide.caption.text)}<p>{$slide.caption.text}</p>{/if}
+                        </div>
+                    {/if}
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+{/if}

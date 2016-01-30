@@ -1,0 +1,42 @@
+{literal}
+<style>
+    .errorContainer {text-align: center;}
+    .errorContainer div.dialog { width: 490px; margin: 4em auto 0 auto;}
+    .errorContainer .error_page { width: 600px; padding: 30px; margin: auto; }
+    .errorContainer .error_page a { width: 271px; margin: 0 auto; display: block; }
+    .errorContainer .alternatives {padding: 20px;}
+    .errorContainer .alternatives a {float__: left; margin: 0 20px;}
+</style>
+{/literal}
+<div class="errorContainer">
+    {if $errorVersion == 1}
+        {*http://twurn.com/404, from: http://www.1stwebdesigner.com/inspiration/unique-404-error-pages-inspiration/*}
+        <div class="dialog">
+            <a href="/"><img src="/public/img/404/404.png"></a>
+            <p>It looks like that page you were looking has been mislaid, sorry.</p>
+        </div>
+    {else}
+        {*http://kidmondo.com/404*}
+        <div class="error_page">
+            <a href="/"><img alt="Error" src="/public/img/404/sad-face.gif"></a>
+            <h1>Ooops...</h1>
+            <p>Pagina cautata nu exista.</p>
+        </div>
+    {/if}
+    <p class="alternatives">
+        <a href="javascript://" onclick="history.go(-1);">Inapoi</a>
+        <a href="/">Prima pagina</a>
+        <a href="/contact">Contact</a>
+    </p>
+{*
+    {literal}
+    <script type="text/javascript">
+        var GOOG_FIXURL_LANG = 'ro';
+        var GOOG_FIXURL_SITE = 'http://www.studioandy.ro'
+    </script>
+    <script type="text/javascript"
+            src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
+    </script>
+    {/literal}
+*}
+</div>

@@ -1,0 +1,43 @@
+
+<!-- Title starts -->
+<div class="page-title">
+    <h2>Despre noi<span>Echipa StudioAndy</span></h2>
+</div>
+<!-- Title ends -->
+
+<!-- Content starts -->
+
+<div class="box-body aboutus">
+    <div class="row-fluid">
+        {foreach from=$lists.personal item=person}
+            <div class="span3">
+                <!-- Staff #1 -->
+                <div class="staff">
+                    <!-- Picture -->
+                    <div class="pic">
+                        <img src="{$person.photo|default:'http://www.fakenamegenerator.com/dummyimage/300x300/222/333/1'}" alt="" />
+                    </div>
+                    <!-- Details -->
+                    <div class="details">
+                        <!-- Name and designation -->
+                        <div class="desig pull-left">
+                            <p class="name">{$person.name|default:'Nume Prenume'}</p>
+                            <em>{$person.position|default:'Pozitie'}</em>
+                        </div>
+                        <!-- Social media details. Replace # with profile links -->
+                        <div class="asocial pull-right">
+                            <a href="#"><i class="icon-facebook"></i></a>
+                            <a href="#"><i class="icon-twitter"></i></a>
+                            <a href="#"><i class="icon-linkedin"></i></a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- Description -->
+                        <p class="adesc">{$person.description|default:'Descriere sumara'}</p>
+                    </div>
+                </div>
+            </div>
+        {/foreach}
+    </div>
+</div>
+
+<!-- Content ends -->
